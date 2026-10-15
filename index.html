@@ -165,7 +165,7 @@ body.alert{animation:flash .6s 3}
 .reveal.in{opacity:1;transform:none}
 
 @media(max-width:620px){
-  nav{font-size:11px;padding:4px}
+  nav{font-size:11px;padding:4px;left:auto;right:10px;transform:none}
   nav a,nav button{padding:6px 9px}
   nav kbd{display:none}
   header.hero{background-position:88% center;min-height:88vh}
@@ -445,7 +445,7 @@ youEl.textContent='your time '+loc+' · '+(diffH===0?'same timezone as anthony':
 clock();setInterval(clock,1000);
 if(navigator.getBattery){navigator.getBattery().then(function(b){var el=document.getElementById('batt');function up(){el.hidden=false;el.textContent='battery · '+(b.charging?'charging · ':'')+Math.round(b.level*100)+'%'}up();b.addEventListener('levelchange',up);b.addEventListener('chargingchange',up)})}
 var nc=navigator.connection;if(nc&&nc.effectiveType){var ce=document.getElementById('conn');ce.hidden=false;ce.textContent='connection · '+nc.effectiveType}
-try{var ua=navigator.userAgent,os=/Windows/.test(ua)?'windows':/Mac/.test(ua)?'mac':/Android/.test(ua)?'android':/iPhone|iPad/.test(ua)?'ios':/Linux/.test(ua)?'linux':'unknown os';
+try{var ua=navigator.userAgent,os=/iPhone|iPad/.test(ua)?'ios':/Android/.test(ua)?'android':/Windows/.test(ua)?'windows':/Mac/.test(ua)?'mac':/Linux/.test(ua)?'linux':'unknown os';
 var br=/Edg\//.test(ua)?'edge':/Chrome\//.test(ua)?'chrome':/Safari\//.test(ua)?'safari':/Firefox\//.test(ua)?'firefox':'browser';
 var pe=document.getElementById('plat');pe.hidden=false;pe.textContent=os+' · '+br}catch(e){}
 
