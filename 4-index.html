@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Anthony — AI / ML &amp; Backend</title>
+<meta name="description" content="M J Anthony. Computer science student building machine learning and backend systems. Learn. Build. Adapt. Keep going.">
+<meta name="theme-color" content="#04070d">
+<meta property="og:title" content="Anthony — AI / ML & Backend">
+<meta property="og:description" content="Learn. Build. Adapt. Keep going.">
+<meta property="og:image" content="hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#04070d;--panel:#070d18;--blue:#269cff;--text:#e8edf5;--mute:#8693a6;--line:rgba(38,156,255,.35)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font:15px/1.7 'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--blue);color:#000}
+#rain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5}
+main,header,footer{position:relative;z-index:1}
+.wrap{max-width:880px;margin:0 auto;padding:0 22px}
+/* hero */
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;background:linear-gradient(180deg,rgba(4,7,13,.2) 0%,rgba(4,7,13,.55) 60%,var(--bg) 100%),url(hero.jpg) 70% center/cover no-repeat}
+.hero .wrap{width:100%;padding-bottom:56px}
+.status{font-size:12px;color:var(--blue);letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px var(--blue);animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-family:Rajdhani,sans-serif;font-weight:700;font-size:clamp(54px,12vw,120px);line-height:.95;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 6px;text-shadow:0 0 40px rgba(38,156,255,.35)}
+.sub{font-family:Rajdhani,sans-serif;font-size:clamp(18px,3vw,24px);letter-spacing:.14em;color:var(--mute);text-transform:uppercase}
+.sub b{color:var(--blue);font-weight:600}
+.typed::after{content:"▌";color:var(--blue);animation:pulse 1s steps(2) infinite;margin-left:2px}
+nav{position:sticky;top:0;z-index:5;background:rgba(4,7,13,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:22px;overflow-x:auto;padding-top:12px;padding-bottom:12px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);white-space:nowrap}
+nav a:hover{color:var(--blue)}
+section{padding:72px 0 8px}
+.label{font-size:11px;letter-spacing:.24em;color:var(--blue);text-transform:uppercase;margin-bottom:6px}
+h2{font-family:Rajdhani,sans-serif;font-size:34px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:22px}
+.rule{height:1px;background:linear-gradient(90deg,var(--blue),transparent);margin-bottom:26px}
+p{color:#c5cedb;margin-bottom:14px}
+/* terminal box */
+.box{position:relative;border:1px solid var(--line);background:var(--panel);padding:22px 24px;margin-top:8px}
+.box::before,.box::after,.box i::before,.box i::after{content:"";position:absolute;width:12px;height:12px;border:2px solid var(--blue)}
+.box::before{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.box::after{top:-2px;right:-2px;border-left:0;border-bottom:0}
+.box i::before{bottom:-2px;left:-2px;border-right:0;border-top:0}
+.box i::after{bottom:-2px;right:-2px;border-left:0;border-top:0}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:4px 14px;font-size:14px}
+.kv span:nth-child(odd){color:var(--mute)}
+.kv span:nth-child(even){color:var(--text)}
+.mission li{list-style:none;display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px dashed rgba(134,147,166,.25);font-size:14px}
+.mission li:last-child{border:0}
+.mission em{font-style:normal;color:var(--blue)}
+/* projects */
+.proj{display:block;margin-bottom:18px;transition:.2s}
+.proj:hover{transform:translateY(-3px);border-color:var(--blue);box-shadow:0 0 28px rgba(38,156,255,.14)}
+.proj .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.proj h3{font-family:Rajdhani,sans-serif;font-size:24px;letter-spacing:.05em;text-transform:uppercase}
+.tag{font-size:11px;color:var(--blue);letter-spacing:.14em;text-transform:uppercase}
+.proj p{margin:8px 0 12px;font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:12px;border:1px solid var(--line);padding:3px 10px;color:var(--text);background:rgba(38,156,255,.06)}
+.links{margin-top:14px;display:flex;gap:18px;flex-wrap:wrap;font-size:13px}
+.links a{color:var(--blue);border-bottom:1px solid transparent}
+.links a:hover{border-color:var(--blue)}
+.note{font-size:12.5px;color:var(--mute);border-left:2px solid var(--blue);padding-left:12px;margin-top:6px}
+/* contact */
+.btns{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.btn{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--blue);background:rgba(38,156,255,.08);font-size:14px;letter-spacing:.06em;transition:.2s;cursor:pointer;font-family:inherit;color:var(--text);text-align:left}
+.btn:hover{background:var(--blue);color:#02060c}
+.btn svg{width:22px;height:22px;fill:currentColor;flex:none}
+.btn small{display:block;color:var(--mute);font-size:11px;letter-spacing:.04em}
+.btn:hover small{color:#02060c}
+.stack{display:flex;flex-wrap:wrap;gap:10px}
+.stack .chip{font-size:13px;padding:6px 14px}
+footer{padding:64px 0 48px;color:var(--mute);font-size:12px;letter-spacing:.12em;text-align:center}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:560px){.kv{grid-template-columns:90px 1fr;font-size:13px}.hero{min-height:80vh;background-position:96% center}section{padding-top:56px}.box{padding:18px 16px}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.dot,.typed::after{animation:none}#rain{display:none}}
+
+body::after{content:"";position:fixed;inset:0;z-index:50;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.14) 0,rgba(0,0,0,.14) 1px,transparent 1px,transparent 3px);mix-blend-mode:multiply}
+#boot{position:fixed;inset:0;z-index:100;background:#02040a;color:var(--blue);padding:28px;font-size:13px;line-height:1.8;white-space:pre-wrap;transition:opacity .6s}
+#boot.off{opacity:0;pointer-events:none}
+#boot .skip{position:absolute;right:22px;bottom:20px;color:var(--mute);font-size:11px;letter-spacing:.14em;cursor:pointer}
+.glitch{position:relative;display:inline-block}
+.glitch:hover::before,.glitch:hover::after{content:attr(data-t);position:absolute;left:0;top:0;width:100%;overflow:hidden}
+.glitch:hover::before{color:#ff3b6b;transform:translate(3px,-2px);clip-path:inset(0 0 55% 0);mix-blend-mode:screen}
+.glitch:hover::after{color:#00e5ff;transform:translate(-3px,2px);clip-path:inset(45% 0 0 0);mix-blend-mode:screen}
+.quip{font-size:12px;color:var(--mute);margin-top:10px;font-style:italic}
+.quip::before{content:"// "}
+#term{background:#02050b;border:1px solid var(--line);margin-top:8px}
+#term .bar{display:flex;gap:7px;align-items:center;padding:8px 12px;border-bottom:1px solid var(--line);font-size:11px;color:var(--mute);letter-spacing:.1em}
+#term .bar b{width:9px;height:9px;border-radius:50%;background:var(--line)}
+#out{padding:14px 16px;height:260px;overflow-y:auto;font-size:13px;line-height:1.6;white-space:pre-wrap;color:#c5cedb}
+#out .c{color:var(--blue)}
+#tf{display:flex;border-top:1px solid var(--line);padding:10px 16px;gap:8px;font-size:13px}
+#tf span{color:var(--blue)}
+#ti{flex:1;background:none;border:0;outline:0;color:var(--text);font:inherit;min-width:0}
+.chipbtn{cursor:pointer}
+.chipbtn:hover{background:var(--blue);color:#000}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--panel);border:1px solid var(--blue);padding:10px 18px;font-size:13px;opacity:0;transition:.3s;z-index:60;pointer-events:none;max-width:90vw}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+body.alert{animation:flash .6s 3}
+@keyframes flash{50%{background:#0a1a33}}
+#glow{position:fixed;width:360px;height:360px;border-radius:50%;pointer-events:none;z-index:0;background:radial-gradient(circle,rgba(38,156,255,.12),transparent 65%);transform:translate(-50%,-50%);left:-999px;top:-999px}
+@media(prefers-reduced-motion:reduce){body::after{display:none}}
+</style>
+</head>
+<body>
+<div id="boot"><span id="bt"></span><span class="skip" onclick="bootOff()">[ skip ↵ ]</span></div><div id="glow"></div><div id="toast"></div>
+<canvas id="rain"></canvas>
+<header class="hero">
+  <div class="wrap">
+    <div class="status"><span class="dot"></span>system status: online · caffeinated · mostly debugged</div>
+    <h1 class="glitch" data-t="Anthony">Anthony</h1>
+    <div class="sub">AI / ML <b>&amp;</b> Backend &nbsp;·&nbsp; <span class="typed" id="typed"></span></div>
+  </div>
+</header>
+<nav><div class="wrap">
+  <a href="#identity">01 identity</a><a href="#ops">02 ops</a><a href="#projects">03 projects</a><a href="#toolchain">04 toolchain</a><a href="#terminal">05 terminal</a><a href="#uplink">06 uplink</a>
+</div></nav>
+<main class="wrap">
+<section id="identity" class="reveal">
+  <div class="label">01 / identity</div><h2>About Me</h2><div class="rule"></div>
+  <p>I enjoy turning ideas into practical solutions using Python, FastAPI, Next.js, and Java. I'm also exploring quantitative finance, strengthening my problem-solving skills, and continuously learning through hands-on projects and experimentation.</p>
+  <p>Inspired by Nightwing's independence, discipline, and determination, I believe in carving my own path, learning from every challenge, and building things that make a difference.</p>
+  <p style="color:var(--text)">Learn. Build. Adapt. Keep going. 🦇</p>
+  <div class="quip">no capes were harmed in the making of this website. (capes are a safety hazard. ask Edna.)</div>
+  <div class="box"><i></i>
+    <div class="label" style="margin-bottom:12px">┌─ nightwing operations ─┐</div>
+    <div class="kv"><span>ID</span><span>MJ-ANTHONY</span><span>SPECIALTY</span><span>AI / BACKEND</span><span>LOCATION</span><span>VIT-AP, INDIA</span><span>STATUS</span><span>ALWAYS LEARNING</span></div>
+  </div>
+</section>
+
+<section id="ops" class="reveal">
+  <div class="label">02 / operations</div><h2>Mission Control</h2><div class="rule"></div>
+  <div class="quip" style="margin:-10px 0 14px">all four are real. the sleep schedule is not listed because it is classified.</div>
+  <div class="box"><i></i><ul class="mission">
+    <li><span>[01] AI / ML</span><em>EXPLORING</em></li>
+    <li><span>[02] BACKEND SYSTEMS</span><em>BUILDING</em></li>
+    <li><span>[03] QUANT FINANCE</span><em>RESEARCHING</em></li>
+    <li><span>[04] OPEN SOURCE</span><em>CONTRIBUTING</em></li>
+  </ul></div>
+</section>
+
+<section id="projects" class="reveal">
+  <div class="label">03 / field work</div><h2>Projects</h2><div class="rule"></div>
+  <div class="quip" style="margin:-10px 0 18px">case files. each one survived at least one 2 a.m. stack trace.</div>
+
+  <div class="box proj"><i></i>
+    <div class="top"><h3>LiquiSight-Extended</h3><span class="tag">fintech · full stack</span></div>
+    <p>Finance chart analysis tool. A Chrome extension reads the chart you're looking at, a FastAPI backend does the analysis, and a Next.js dashboard shows the results.</p>
+    <div class="chips"><span class="chip">Chrome Extension</span><span class="chip">FastAPI</span><span class="chip">Next.js</span></div>
+    <div class="links"><a href="https://github.com/mjanthony819/LiquiSight-Extended" target="_blank" rel="noopener">source ↗</a></div>
+  </div>
+
+  <div class="box proj"><i></i>
+    <div class="top"><h3>SkinLens</h3><span class="tag">medical imaging · live demo</span></div>
+    <p>Skin lesion analysis app. Upload a dermoscopy photo and a classical image-processing pipeline (hair removal, Otsu segmentation, morphology, ABCD features) returns the segmented lesion and an explainable risk score. No deep learning. It refuses to score bad images.</p>
+    <div class="chips"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Streamlit</span></div>
+    <div class="note">Segmentation checked on 250 held-out ISIC images: median Dice 0.77. The risk score is a screening aid, not a diagnosis, and has not been clinically validated.</div>
+    <div class="links"><a href="https://skinlens-mjanthony.streamlit.app/" target="_blank" rel="noopener">live app ↗</a><a href="https://github.com/mjanthony819/SkinLens" target="_blank" rel="noopener">source ↗</a></div>
+  </div>
+
+  <div class="box proj"><i></i>
+    <div class="top"><h3>Does ML Beat the Market?</h3><span class="tag">quant finance · backtest</span></div>
+    <p>An end-to-end backtest on 6 NSE stocks plus Nifty. Eleven momentum, volatility and volume features, gradient boosting trained on 2016–2022, then paper-traded out of sample from 2023 with 0.1% costs.</p>
+    <div class="chips"><span class="chip">Python</span><span class="chip">yfinance</span><span class="chip">Gradient Boosting</span></div>
+    <div class="note">Result: no edge. About 49% direction accuracy and a Sharpe of about -0.05, against 0.27 for buy-and-hold and 0.56 for Nifty. Published as a rigor exercise (no lookahead, costs included), not a discovery.</div>
+    <div class="links"><a href="https://github.com/mjanthony819/nse-ml-backtest" target="_blank" rel="noopener">source ↗</a></div>
+  </div>
+  <div class="links"><a href="https://github.com/mjanthony819?tab=repositories" target="_blank" rel="noopener">all repositories ↗</a></div>
+</section>
+
+<section id="toolchain" class="reveal">
+  <div class="label">04 / toolchain</div><h2>Tech Stack</h2><div class="rule"></div>
+  <div class="quip" style="margin:-10px 0 14px">utility belt. tap a gadget.</div>
+  <div class="stack"><span class="chip chipbtn" data-q="import antigravity. it works, i checked.">Python</span><span class="chip chipbtn" data-q="public static void main. yes, all of it.">Java</span><span class="chip chipbtn" data-q="any is not a type. any is a cry for help.">TypeScript</span><span class="chip chipbtn" data-q="fast because i said so. and because async.">FastAPI</span><span class="chip chipbtn" data-q="server component or client component? yes.">Next.js</span><span class="chip chipbtn" data-q="it's just vibes with a loss function.">Machine Learning</span><span class="chip chipbtn" data-q="if it can't segment it, it refuses to guess.">Image Processing</span><span class="chip chipbtn" data-q="git commit -m 'final_v2_REAL'">Git</span></div>
+  <p style="margin-top:20px;font-size:13px;color:var(--mute)">ON MY RADAR → quantitative finance · problem-solving · hands-on experimentation</p>
+</section>
+
+<section id="terminal" class="reveal">
+  <div class="label">05 / batcomputer</div><h2>Ask The Batcomputer</h2><div class="rule"></div>
+  <div id="term"><div class="bar"><b></b><b></b><b></b>&nbsp; anthony@batcomputer: ~</div><div id="out"></div><form id="tf"><span>$</span><input id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="type help"></form></div>
+  <div class="links" style="margin-top:10px"><a href="#" data-cmd="help">help</a><a href="#" data-cmd="whoami">whoami</a><a href="#" data-cmd="projects">projects</a><a href="#" data-cmd="hire">hire</a></div>
+</section>
+
+<section id="uplink" class="reveal">
+  <div class="label">06 / uplink</div><h2>Contact Console</h2><div class="rule"></div>
+  <div class="quip" style="margin:-10px 0 14px">no bat-signal needed. email works and is much cheaper than a searchlight.</div>
+  <div class="btns">
+    <a class="btn" href="https://github.com/mjanthony819" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg><span>GitHub<small>@mjanthony819</small></span></a>
+    <a class="btn" href="https://www.linkedin.com/in/m-j-anthony-0646b2299/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>LinkedIn<small>m-j-anthony</small></span></a>
+    <button class="btn" id="discord" type="button" aria-label="Copy Discord username"><svg viewBox="0 0 24 24"><path d="M20.32 4.37A19.8 19.8 0 0 0 15.4 2.85c-.21.38-.46.89-.63 1.3a18.4 18.4 0 0 0-5.54 0 13 13 0 0 0-.64-1.3 19.7 19.7 0 0 0-4.92 1.52C0.56 9.05-.29 13.6.13 18.08a19.9 19.9 0 0 0 6.03 3.05c.49-.67.92-1.38 1.3-2.12-.71-.27-1.39-.6-2.03-.99.17-.12.34-.25.5-.38a14.2 14.2 0 0 0 12.14 0c.16.13.33.26.5.38-.65.39-1.33.72-2.04.99.38.74.82 1.45 1.3 2.12a19.9 19.9 0 0 0 6.03-3.05c.5-5.19-.85-9.7-3.54-13.71zM8.02 15.33c-1.18 0-2.16-1.09-2.16-2.42s.95-2.42 2.16-2.42 2.18 1.09 2.16 2.42c0 1.33-.95 2.42-2.16 2.42zm7.96 0c-1.18 0-2.16-1.09-2.16-2.42s.95-2.42 2.16-2.42 2.18 1.09 2.16 2.42c0 1.33-.95 2.42-2.16 2.42z"/></svg><span>Discord<small id="dtxt">theonewhoace. (tap to copy)</small></span></button>
+    <a class="btn" href="mailto:mjanthony819@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.5L12 12.2 19.8 6H4.2zM20 7.7l-8 6.3-8-6.3V18h16V7.7z"/></svg><span>Email<small>mjanthony819@gmail.com</small></span></a>
+  </div>
+</section>
+</main>
+<footer>© <span id="yr"></span> M J ANTHONY · BUILT IN THE DARK · 🦇<br><span style="letter-spacing:.06em">psst: try the konami code. or type <b style="color:var(--blue)">sudo</b> in the terminal.</span></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+// typed line
+const words=['Learn.','Build.','Adapt.','Keep going.'];const el=document.getElementById('typed');
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){el.textContent=words.join(' ')}else{
+let w=0,c=0,del=false;(function t(){const s=words[w];el.textContent=s.slice(0,c);
+if(!del&&c<s.length){c++;setTimeout(t,90)}else if(!del){del=true;setTimeout(t,1100)}else if(c>0){c--;setTimeout(t,40)}else{del=false;w=(w+1)%words.length;setTimeout(t,250)}})()}
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.08});
+document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
+// discord copy
+document.getElementById('discord').onclick=()=>{const t='theonewhoace.';const d=document.getElementById('dtxt');
+(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>d.textContent='copied: '+t,()=>d.textContent=t)};
+// rain
+(function(){const c=document.getElementById('rain'),x=c.getContext('2d');let W,H,d=[];
+function r(){W=c.width=innerWidth;H=c.height=innerHeight;d=Array.from({length:Math.floor(W/14)},()=>({x:Math.random()*W,y:Math.random()*H,l:8+Math.random()*14,v:6+Math.random()*7}))}
+r();addEventListener('resize',r);
+(function f(){x.clearRect(0,0,W,H);x.strokeStyle='rgba(120,180,255,.22)';x.lineWidth=1;x.beginPath();
+d.forEach(p=>{x.moveTo(p.x,p.y);x.lineTo(p.x-1.5,p.y+p.l);p.y+=p.v;if(p.y>H){p.y=-20;p.x=Math.random()*W}});x.stroke();requestAnimationFrame(f)})()})();
+
+// boot
+const bt=document.getElementById('bt'),boot=document.getElementById('boot');
+const lines=['> initializing batcomputer...','> loading skyline.............. ok','> rain machine................ ok','> checking coffee level....... CRITICAL (ignoring)','> mounting /projects.......... 3 case files','> bypassing recruiter anxiety. ok','> connecting to anthony....... ONLINE','','welcome to gotham. try not to fall off anything.'];
+let bi=0,bc=0,bdone=false;function bootOff(){if(bdone)return;bdone=true;boot.classList.add('off');setTimeout(()=>boot.remove(),700)}
+if(sessionStorage.getItem('b')||matchMedia('(prefers-reduced-motion:reduce)').matches){boot.remove()}else{
+sessionStorage.setItem('b',1);addEventListener('keydown',bootOff,{once:true});boot.addEventListener('click',bootOff);
+(function t(){if(bdone)return;if(bi>=lines.length){setTimeout(bootOff,500);return}const l=lines[bi];bt.textContent+=l[bc]||'';bc++;if(bc>l.length){bt.textContent+='\n';bi++;bc=0;setTimeout(t,l?120:60)}else setTimeout(t,9)})()}
+// glow
+const gl=document.getElementById('glow');addEventListener('pointermove',e=>{gl.style.left=e.clientX+'px';gl.style.top=e.clientY+'px'});
+// toast
+const ts=document.getElementById('toast');let tt;function toast(m){ts.textContent=m;ts.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>ts.classList.remove('on'),2600)}
+document.querySelectorAll('[data-q]').forEach(c=>c.onclick=()=>toast(c.dataset.q));
+// terminal
+const out=document.getElementById('out'),ti=document.getElementById('ti');
+function say(t,c){const d=document.createElement('div');if(c)d.className=c;d.textContent=t;out.appendChild(d);out.scrollTop=out.scrollHeight}
+const cmds={
+help:()=>'commands: whoami, projects, stack, contact, hire, coffee, sudo, batman, joke, clear',
+whoami:()=>'anthony. cs student at vit-ap. builds ml + backend things, studies markets, argues with its own code.',
+projects:()=>'1. LiquiSight-Extended  - chart analysis (extension + fastapi + next.js)\n2. SkinLens  - lesion analysis, live demo\n3. nse-ml-backtest  - tested ML on the market. the market won.',
+stack:()=>'python, java, typescript, fastapi, next.js, ml, image processing, git',
+contact:()=>'mjanthony819@gmail.com  |  github.com/mjanthony819  |  discord: theonewhoace.',
+hire:()=>'excellent decision. scroll to the uplink and send an email. references available: my commit history (the cleaned-up parts).',
+coffee:()=>'error 418: i\'m a teapot. (i wish.) brewing anyway...',
+sudo:()=>'anthony is not in the sudoers file. this incident will be reported to alfred.',
+batman:()=>'i\'m not batman. i\'m the one who got tired of being in the shadow and wrote his own code.',
+nightwing:()=>'correct. a bit more flips, a lot less brooding.',
+joke:()=>['why do programmers prefer dark mode? because light attracts bugs.','my backtest has a 49% hit rate. a coin flip with extra steps and better charts.','there are 10 kinds of people: those who get binary and those who don\'t.'][Math.floor(Math.random()*3)],
+ls:()=>'about.txt  projects/  secrets/ (permission denied)  utility_belt.sh',
+'rm -rf /':()=>'nice try. gotham has backups.',
+pwd:()=>'/gotham/rooftops/anthony',
+};
+say('batcomputer v1.0 - type "help"','c');
+function run(v){v=v.trim();say('$ '+v,'c');if(!v)return;if(v==='clear'){out.textContent='';return}
+const k=v.toLowerCase().replace(/^sudo .+/,'sudo');const f=cmds[k];say(f?f():'command not found: '+v+'. try "help".')}
+document.getElementById('tf').onsubmit=e=>{e.preventDefault();run(ti.value);ti.value=''};
+document.querySelectorAll('[data-cmd]').forEach(a=>a.onclick=e=>{e.preventDefault();run(a.dataset.cmd)});
+// konami
+const kk=[38,38,40,40,37,39,37,39,66,65];let ki=0;addEventListener('keydown',e=>{ki=(e.keyCode===kk[ki])?ki+1:0;if(ki===kk.length){ki=0;document.body.classList.add('alert');toast('BAT-SIGNAL ACTIVATED. alfred has been notified. nobody is coming. hire anthony.');setTimeout(()=>document.body.classList.remove('alert'),2000)}});
+// title
+let ot=document.title;document.addEventListener('visibilitychange',()=>{document.title=document.hidden?'come back, gotham needs you':ot});
+console.log('%cHey, you opened devtools. Respect. mjanthony819@gmail.com','color:#269cff;font:14px monospace');
+</script>
+</body>
+</html>
