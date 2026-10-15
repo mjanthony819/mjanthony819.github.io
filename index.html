@@ -167,9 +167,9 @@ body.alert{animation:flash .6s 3}
 
   <div class="box proj"><i></i>
     <div class="top"><h3>Does ML Beat the Market?</h3><span class="tag">quant finance · backtest</span></div>
-    <p>An end-to-end backtest on 6 NSE stocks plus Nifty. Eleven momentum, volatility and volume features, gradient boosting trained on 2016–2022, then paper-traded out of sample from 2023 with 0.1% costs.</p>
-    <div class="chips"><span class="chip">Python</span><span class="chip">yfinance</span><span class="chip">Gradient Boosting</span></div>
-    <div class="note">Result: no edge. About 49% direction accuracy and a Sharpe of about -0.05, against 0.27 for buy-and-hold and 0.56 for Nifty. Published as a rigor exercise (no lookahead, costs included), not a discovery.</div>
+    <p>An end-to-end backtest on 6 NSE stocks plus Nifty. Momentum, volatility and volume features feed gradient boosting, retrained every year on an expanding window (walk-forward) and paper-traded out of sample with 0.1% costs.</p>
+    <div class="chips"><span class="chip">Python</span><span class="chip">yfinance</span><span class="chip">Gradient Boosting</span><span class="chip">Walk-forward</span></div>
+    <div class="note">Result: no statistically detectable edge. Main 6-stock walk-forward: -1.25% CAGR, excess Sharpe -0.54 (CI -1.573 to 0.462, which spans zero). Equal-weight: +0.54% CAGR, -0.36. Nifty BeES: +7.35% CAGR, +0.13. Direction accuracy 48.98% against a 51.02% majority-class baseline. Published as a rigor exercise, not a discovery.</div>
     <div class="links"><a href="https://github.com/mjanthony819/nse-ml-backtest" target="_blank" rel="noopener">source ↗</a></div>
   </div>
   <div class="links"><a href="https://github.com/mjanthony819?tab=repositories" target="_blank" rel="noopener">all repositories ↗</a></div>
