@@ -1,26 +1,62 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>A place to think out loud (sample) | M J Anthony</title>
 <meta name="description" content="A replaceable written-note template. Not a personal blog post by Anthony.">
-<meta name="theme-color" content="#05080f">
-<link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMyA4JyBzaGFwZS1yZW5kZXJpbmc9J2NyaXNwRWRnZXMnPjxwYXRoIGZpbGw9JyMzYWE0ZmYnIGQ9J00wIDBoMXYxSDB6TTEyIDBoMXYxSDEyek0wIDFoMnYxSDB6TTExIDFoMnYxSDExek0wIDJoM3YxSDB6TTYgMmgxdjFINnpNMTAgMmgzdjFIMTB6TTAgM2g0djFIMHpNNSAzaDN2MUg1ek05IDNoNHYxSDl6TTEgNGgxMXYxSDF6TTIgNWg5djFIMnpNMyA2aDd2MUgzek01IDdoM3YxSDV6Jy8+PC9zdmc+">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Doto:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+<meta name="theme-color" content="#faf7f1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Crect%20width%3D%2216%22%20height%3D%2216%20rx%3D%223%22%20fill%3D%22%23faf7f1%22/%3E%3Ctext%20x%3D%228%22%20y%3D%2212.5%22%20text-anchor%3D%22middle%22%20font-family%3D%22Georgia,serif%22%20font-style%3D%22italic%22%20font-size%3D%2212%22%20fill%3D%22%232347e0%22%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#05080f;--ink:#dde6f2;--body:#bcc8d9;--dim:#8494a9;--blue:#3aa4ff;--line:#1a2839;--line-soft:#1a2839}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--body);font:15px/1.85 'Space Mono',ui-monospace,monospace;-webkit-font-smoothing:antialiased}::selection{background:var(--blue);color:var(--bg)}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:6px}a:hover{color:var(--blue)}
-nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:39;display:flex;align-items:center;gap:2px;background:rgba(7,12,22,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line-soft);border-radius:999px;padding:5px;font-family:'Doto',monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}nav a,nav button{color:var(--dim);padding:7px 13px;border-radius:999px;border:0;background:none;font:inherit;cursor:pointer;letter-spacing:inherit;text-transform:inherit}nav a:hover,nav button:hover{color:var(--ink);background:rgba(58,164,255,.10)}nav a[aria-current]{color:var(--blue);background:#0c1a2b}nav .sep{width:1px;height:16px;background:var(--line-soft);margin:0 4px}nav kbd{font-family:inherit;color:#54637a;border:1px solid var(--line-soft);border-radius:6px;padding:3px 7px;font-size:10px;cursor:pointer}nav kbd:hover{color:var(--blue);border-color:#1663b8}#rainbtn.on{color:var(--blue)}#rain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.55}main,footer{position:relative;z-index:1}
-.mark{position:absolute;top:24px;left:22px;color:var(--blue);font:12px 'Press Start 2P',monospace}.wrap{width:min(100%,724px);padding:0 26px;margin:auto}main{padding-top:150px!important;min-height:70vh}.eyebrow,.meta,.back,.post-date,footer{font:700 12px/1.7 'Doto',monospace;letter-spacing:.12em;color:var(--dim)}.eyebrow{text-transform:uppercase;color:var(--blue);margin:0 0 22px}h1{color:var(--ink);font:400 clamp(24px,5vw,36px)/1.6 'Press Start 2P',monospace;letter-spacing:-.025em;margin:0 0 24px;overflow-wrap:anywhere}.intro{max-width:580px;margin:0 0 44px}.post{border-top:1px solid var(--line);padding:26px 0 30px}.post:last-child{border-bottom:1px solid var(--line)}.post-date{margin-bottom:10px;display:flex;gap:16px;flex-wrap:wrap}.demo{color:var(--blue)}.post h2{font-size:21px;color:var(--ink);line-height:1.5;margin:0 0 10px}.post h2 span{color:var(--blue);font-weight:400}.post p{margin:0;color:var(--dim);font-size:14px}.back{display:inline-block;margin-bottom:46px}.meta{margin:-8px 0 34px}.notice{border-left:2px solid var(--blue);padding:4px 0 4px 16px;color:var(--dim);font-size:13px;margin:0 0 32px}article p{margin:0 0 24px}article h2{font-size:19px;color:var(--ink);margin:40px 0 16px}article a:not(.back){color:var(--blue);text-decoration:underline;text-underline-offset:4px}figure{margin:32px 0}figcaption{color:var(--dim);font-size:12px;margin-top:12px;line-height:1.7}footer{margin-top:90px;border-top:1px solid var(--line);padding:28px 0 42px}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer a{color:var(--blue)}code{font-size:.9em;color:var(--ink)}
-@media(max-width:620px){main{padding-top:125px!important}.wrap{padding-left:22px;padding-right:22px}.mark{display:none}nav{font-size:11px;padding:4px;max-width:calc(100vw - 16px);overflow-x:auto}nav a,nav button{padding:6px 9px}nav kbd{display:none}.back{margin-bottom:32px}h1{font-size:25px}body{font-size:14px}.intro{margin-bottom:34px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}#rain{display:none}}
-#reading-progress{position:fixed;inset:0 auto auto 0;width:100%;height:3px;z-index:110;background:var(--blue);transform:scaleX(0);transform-origin:left;pointer-events:none}</style></head><body>
+:root{--paper:#faf7f1;--paper-2:#f3eee5;--ink:#191713;--body:#3d3a33;--dim:#7c7668;--blue:#2347e0;--blue-soft:rgba(35,71,224,.08);--line:#e2dccf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--body);font:16px/1.85 'Inter',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+::selection{background:var(--blue);color:var(--paper)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:4px;border-radius:2px}
+header.top{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(250,247,241,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.wrap{width:min(100% - 48px,724px);margin:0 auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;height:56px}
+.brand{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:19px;color:var(--ink)}
+.brand b{color:var(--blue);font-weight:400}
+nav{display:flex;gap:22px}
+nav a{font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);padding:4px 0;transition:color .2s}
+nav a:hover,nav a[aria-current]{color:var(--blue)}
+main{padding:150px 0 60px;min-height:70vh}
+.eyebrow,.meta,footer,.back{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.eyebrow{color:var(--blue);margin:0 0 20px}
+h1{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(40px,7vw,60px);line-height:1.05;color:var(--ink);margin:0 0 22px;letter-spacing:-.015em}
+.meta{margin:0 0 36px}
+.notice{border-left:2px solid var(--blue);background:var(--blue-soft);padding:14px 18px;color:var(--dim);font-size:13.5px;margin:0 0 36px;border-radius:0 8px 8px 0}
+article p{margin:0 0 24px;max-width:640px}
+article h2{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-size:clamp(22px,3.4vw,27px);color:var(--ink);margin:44px 0 14px}
+.back{display:inline-block;margin-bottom:46px;color:var(--blue)}
+.back:hover{text-decoration:underline;text-underline-offset:4px}
+footer{border-top:1px solid var(--line);padding:30px 0 44px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--blue)}
+#reading-progress{position:fixed;top:0;left:0;width:100%;height:2px;z-index:110;background:var(--blue);transform:scaleX(0);transform-origin:left;pointer-events:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
 <div id="reading-progress" aria-hidden="true"></div>
-<canvas id="rain"></canvas>
-<a class="mark" href="/" aria-label="Anthony home">[a_]</a>
-<nav aria-label="Main navigation"><a href="/#top">home</a><a href="/#about">about</a><a href="/#projects">work</a><a href="/notes/" aria-current="page">notes</a><a href="/#terminal">terminal</a><a href="/#contact">contact</a><span class="sep" aria-hidden="true"></span><button id="rainbtn" type="button" title="toggle weather">rain</button><kbd id="kb" title="talk to the batcomputer" role="button" tabindex="0">⌘K</kbd></nav>
+<header class="top"><div class="wrap topbar">
+  <a class="brand" href="/">m j anthony<b>.</b></a>
+  <nav aria-label="Main">
+    <a href="/#about">about</a>
+    <a href="/#work">work</a>
+    <a href="/notes/" aria-current="page">notes</a>
+    <a href="/#contact">contact</a>
+  </nav>
+</div></header>
+
 <main class="wrap"><article>
 <a class="back" href="/notes/">&#8592; all notes</a>
-<header><p class="eyebrow">template / written note</p><h1>A place to<br>think out loud</h1><p class="meta"><time datetime="2026-10-15">15 OCT 2026</time> &nbsp; / &nbsp; SAMPLE</p></header>
+<header><p class="eyebrow">template / written note</p><h1>A place to<br>think out loud</h1><p class="meta"><time datetime="2026-10-15">15 oct 2026</time> &nbsp; / &nbsp; sample</p></header>
 <aside class="notice">This is a replaceable layout sample, not a personal blog post by Anthony. The words below show the format; the next words can be yours.</aside>
 <!-- YOUR POST: replace these paragraphs with your own words. Copy this file for another note. -->
 <p>Some things don't need to be a project. A thought after class. A problem that took longer than expected. Something worth coming back to.</p>
@@ -28,30 +64,21 @@ nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:39;displ
 <h2>Start with one thing</h2><p>This is where the actual story goes. What caught your attention? What changed your mind? What are you still trying to understand?</p>
 <p>It can be a short entry or a long one. It can have a conclusion, or simply stop at a question.</p>
 <h2>Leave room</h2><p>Not every entry needs an answer. Sometimes writing it down is the useful part.</p>
-<p class="notice">To make this yours: copy this file, change the title and date, and replace the paragraphs. Add its title and link to the notes index. A short guide is in <code>notes/README.md</code> in the repository.</p>
+<p>To make this yours: copy this file, change the title and date, and replace the paragraphs. Add its title and link to the notes index. A short guide is in notes/README.md in the repository.</p>
 </article></main>
-<footer><div class="wrap"><span>ANTHONY / field notes</span><a href="/">back to the rooftop &#8599;</a></div></footer>
+
+<footer><div class="wrap">
+  <span>m j anthony / field notes</span>
+  <a href="/">back home ↗</a>
+</div></footer>
+
 <script>
-var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
-var rainOn=!RM&&localStorage.getItem('rain')!=='off';
-var rc=document.getElementById('rain'),rx=rc.getContext('2d'),W,H,drops=[],raf=null;
-function rsize(){W=rc.width=innerWidth;H=rc.height=innerHeight;drops=Array.from({length:Math.floor(W/16)},function(){return{x:Math.random()*W,y:Math.random()*H,l:8+Math.random()*14,v:6+Math.random()*7}})}
-function rframe(){rx.clearRect(0,0,W,H);rx.strokeStyle='rgba(120,180,255,.20)';rx.lineWidth=1;rx.beginPath();drops.forEach(function(p){rx.moveTo(p.x,p.y);rx.lineTo(p.x-1.5,p.y+p.l);p.y+=p.v;if(p.y>H){p.y=-20;p.x=Math.random()*W}});rx.stroke();raf=requestAnimationFrame(rframe)}
-function rainSet(on){rainOn=on;localStorage.setItem('rain',on?'on':'off');document.getElementById('rainbtn').classList.toggle('on',on);if(on){rsize();if(!raf)rframe()}else{if(raf){cancelAnimationFrame(raf);raf=null}rx.clearRect(0,0,W,H)}}
-addEventListener('resize',function(){if(rainOn)rsize()});
-document.getElementById('rainbtn').onclick=function(){rainSet(!rainOn)};
-rainSet(rainOn);
-function toTerm(){location.href='/#terminal'}
-document.getElementById('kb').onclick=toTerm;
-document.getElementById('kb').onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toTerm()}};
-addEventListener('keydown',function(e){if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();toTerm()}});
-</script>
-<script>// Reading progress, including restored scroll positions and resized viewports.
 (function(){
   var bar=document.getElementById('reading-progress'),pending=false;
-  function update(){var root=document.documentElement,range=root.scrollHeight-innerHeight;bar.style.transform='scaleX('+Math.max(0,Math.min(1,range>0?scrollY/range:0))+')';pending=false}
-  function queue(){if(!pending){pending=true;requestAnimationFrame(update)}}
-  addEventListener('scroll',queue,{passive:true});addEventListener('resize',queue);addEventListener('pageshow',queue);addEventListener('load',queue);
-  new ResizeObserver(queue).observe(document.body);update();
+  function update(){var range=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+Math.max(0,Math.min(1,range>0?scrollY/range:0))+')';pending=false}
+  function onScroll(){if(!pending){pending=true;requestAnimationFrame(update)}}
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);update();
 })();
-</script></body></html>
+</script>
+</body>
+</html>
