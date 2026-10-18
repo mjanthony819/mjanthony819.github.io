@@ -286,7 +286,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 48px;margin-top:0}
   document.getElementById('yr').textContent=new Date().getFullYear();
   function tick(){
     try{
-      document.getElementById('ist').textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false})+' ist';
+      document.getElementById('ist').textContent=new Intl.DateTimeFormat('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date())+' ist';
     }catch(e){}
   }
   tick();setInterval(tick,30000);
