@@ -233,7 +233,7 @@ footer{border-top:1px solid var(--line);padding:40px 0 48px;margin-top:0}
           <h3>SkinLens</h3>
           <p class="p-meta">medical imaging · live demo</p>
           <p class="p-desc">Skin lesion analysis app. Upload a dermoscopy photo and a classical image-processing pipeline (hair removal, Otsu segmentation, morphology, ABCD features) returns the segmented lesion and an explainable risk score. No deep learning. It refuses to score bad images.</p>
-          <p class="p-caveat">Segmentation checked on 250 held-out ISIC images: median Dice 0.77. The risk score is a screening aid, not a diagnosis, and has not been clinically validated.</p>
+          <p class="p-caveat">Segmentation checked on 250 held-out ISIC images: mean Dice 0.66, against 0.53 for plain Otsu thresholding. The risk score is a screening aid, not a diagnosis, and has not been clinically validated.</p>
           <div class="tags"><span>Python</span><span>OpenCV</span><span>Streamlit</span></div>
           <div class="p-links"><a href="https://skinlens-mjanthony.streamlit.app/" target="_blank" rel="noopener">live app ↗</a><a href="https://github.com/mjanthony819/SkinLens" target="_blank" rel="noopener">source ↗</a></div>
         </div>
@@ -249,6 +249,84 @@ footer{border-top:1px solid var(--line);padding:40px 0 48px;margin-top:0}
           <p class="p-caveat">Result: no statistically detectable edge. Main 6-stock walk-forward: -1.25% CAGR, excess Sharpe -0.54 (CI -1.573 to 0.462, which spans zero). Equal-weight: +0.54% CAGR, -0.36. Nifty BeES: +7.35% CAGR, +0.13. Direction accuracy 48.98% against a 51.02% majority-class baseline. Published as a rigor exercise, not a discovery.</p>
           <div class="tags"><span>Python</span><span>yfinance</span><span>Gradient Boosting</span><span>Walk-forward</span></div>
           <div class="p-links"><a href="https://github.com/mjanthony819/nse-ml-backtest" target="_blank" rel="noopener">source ↗</a></div>
+        </div>
+        <div class="p-arrow">↗</div>
+      </article>
+
+
+      <article class="project">
+        <div class="p-num">04</div>
+        <div class="p-main">
+          <h3>BacktestLab NSE</h3>
+          <p class="p-meta">quant finance · live app</p>
+          <p class="p-desc">No-code backtesting for Indian stocks. Pick a Nifty stock, a strategy and a date range, and it replays the trades day by day with costs - equity curve against buy-and-hold and Nifty, drawdown, Sharpe, and a trade list you can export.</p>
+          <p class="p-caveat">Six rule-based strategies (SMA crossover, RSI mean reversion, momentum, Bollinger, Donchian breakout, buy-and-hold). Educational tool, not investment advice.</p>
+          <div class="tags"><span>FastAPI</span><span>Next.js</span><span>Render</span></div>
+          <div class="p-links"><a href="https://mjanthony819.github.io/backtestlab-nse/" target="_blank" rel="noopener">live app ↗</a><a href="https://github.com/mjanthony819/backtestlab-nse" target="_blank" rel="noopener">source ↗</a></div>
+        </div>
+        <div class="p-arrow">↗</div>
+      </article>
+
+      <article class="project">
+        <div class="p-num">05</div>
+        <div class="p-main">
+          <h3>NightTerm</h3>
+          <p class="p-meta">markets · live app</p>
+          <p class="p-desc">A keyboard-driven terminal for the Indian market: NIFTY 50 watchlist with sparklines, candlestick charts, a news feed, and a command line you drive without touching the mouse.</p>
+          <p class="p-caveat">Quotes are delayed about 15 minutes and come from Yahoo Finance's unofficial endpoint - not exchange data. Not investment advice.</p>
+          <div class="tags"><span>Next.js</span><span>FastAPI</span><span>Tailwind</span></div>
+          <div class="p-links"><a href="https://mjanthony819.github.io/nightterm/" target="_blank" rel="noopener">live app ↗</a><a href="https://github.com/mjanthony819/nightterm" target="_blank" rel="noopener">source ↗</a></div>
+        </div>
+        <div class="p-arrow">↗</div>
+      </article>
+
+      <article class="project">
+        <div class="p-num">06</div>
+        <div class="p-main">
+          <h3>Grayson</h3>
+          <p class="p-meta">windows · desktop app</p>
+          <p class="p-desc">An offline file converter for Windows. Copy a file, tap a hotkey, pick the target format from a radial ring menu. Pillow, PyMuPDF and ffmpeg do the work locally - nothing leaves the machine.</p>
+          <p class="p-caveat">Prototype: the unsigned installer is currently blocked by Windows Smart App Control, and launch on real Windows machines is still being validated.</p>
+          <div class="tags"><span>Python</span><span>PyQt</span><span>ffmpeg</span></div>
+          <div class="p-links"><a href="https://mjanthony819.github.io/grayson/" target="_blank" rel="noopener">download ↗</a><a href="https://github.com/mjanthony819/grayson" target="_blank" rel="noopener">source ↗</a></div>
+        </div>
+        <div class="p-arrow">↗</div>
+      </article>
+
+      <article class="project">
+        <div class="p-num">07</div>
+        <div class="p-main">
+          <h3>AirGlass</h3>
+          <p class="p-meta">windows · desktop app</p>
+          <p class="p-desc">View your iPhone screen on a Windows PC over AirPlay. A control panel around UxPlay, the open-source AirPlay receiver: start and stop mirroring, set the AirPlay name, resolution and latency mode, and read the engine log.</p>
+          <p class="p-caveat">Early release: installer and engine are built and tested in CI, but the full flow has not yet been tested with a real iPhone on real hardware. Free for noncommercial use.</p>
+          <div class="tags"><span>C#</span><span>.NET 8</span><span>UxPlay</span></div>
+          <div class="p-links"><a href="https://mjanthony819.github.io/airglass/" target="_blank" rel="noopener">download ↗</a><a href="https://github.com/mjanthony819/airglass" target="_blank" rel="noopener">source ↗</a></div>
+        </div>
+        <div class="p-arrow">↗</div>
+      </article>
+
+      <article class="project">
+        <div class="p-num">08</div>
+        <div class="p-main">
+          <h3>Classical Image Restoration Lab</h3>
+          <p class="p-meta">image processing · live demo</p>
+          <p class="p-desc">Seven classical restoration and enhancement methods - gamma, CLAHE, histogram equalization, Dark Channel Prior dehazing, Retinex - with parameter controls, intermediate stages, histograms and PSNR/SSIM scoring. Built as an investigation tool: why an image improves, which method wins, and what gets lost.</p>
+          <p class="p-caveat">Digital image processing course project. The hosted demo sleeps when idle, so the first visit can be slow to load.</p>
+          <div class="tags"><span>Python</span><span>OpenCV</span><span>FastAPI</span><span>React</span></div>
+          <div class="p-links"><a href="https://classical-image-restoration-lab.onrender.com/" target="_blank" rel="noopener">live demo ↗</a></div>
+        </div>
+        <div class="p-arrow">↗</div>
+      </article>
+
+      <article class="project">
+        <div class="p-num">09</div>
+        <div class="p-main">
+          <h3>Four small web apps</h3>
+          <p class="p-meta">canvas · vanilla js</p>
+          <p class="p-desc">Maze Race generates a random maze and races BFS against DFS. EXIF Inspector shows the metadata hidden inside a photo. Gravity Playground is an n-body orbit sandbox. Quake Map plots live USGS earthquakes by magnitude and depth. No backends, no frameworks.</p>
+          <div class="tags"><span>JavaScript</span><span>Canvas</span><span>Leaflet</span></div>
+          <div class="p-links"><a href="https://mjanthony819.github.io/maze-race/" target="_blank" rel="noopener">maze race ↗</a><a href="https://mjanthony819.github.io/exif-inspector/" target="_blank" rel="noopener">exif inspector ↗</a><a href="https://mjanthony819.github.io/gravity-playground/" target="_blank" rel="noopener">gravity playground ↗</a><a href="https://mjanthony819.github.io/quake-map/" target="_blank" rel="noopener">quake map ↗</a></div>
         </div>
         <div class="p-arrow">↗</div>
       </article>
