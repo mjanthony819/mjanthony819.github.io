@@ -159,6 +159,8 @@ footer{border-top:1px solid var(--line);padding:40px 0 48px;margin-top:0}
   .scrolldown span{animation:none}
 }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
 </head>
 <body>
 
@@ -419,5 +421,31 @@ footer{border-top:1px solid var(--line);padding:40px 0 48px;margin-top:0}
   }
 })();
 </script>
-<script src="leaves.js"></script><script>initHeroLeaves(document.getElementById("leaves"))</script></body>
+<script src="leaves.js"></script><script>initHeroLeaves(document.getElementById("leaves"))</script><script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  try{
+    if(window.Lenis){
+      var lenis=new Lenis({duration:1.1,smoothWheel:true});
+      (function raf(t){lenis.raf(t);requestAnimationFrame(raf)})(0);
+      document.querySelectorAll('a[href^="#"]').forEach(function(a){
+        a.addEventListener('click',function(e){
+          var id=a.getAttribute('href');
+          if(id.length>1&&document.querySelector(id)){e.preventDefault();lenis.scrollTo(id)}
+        });
+      });
+    }
+  }catch(e){}
+  try{
+    if(window.gsap){
+      var tl=gsap.timeline({defaults:{ease:'power3.out'}});
+      tl.from('.kicker',{y:18,autoAlpha:0,duration:.7})
+        .from('h1.name',{y:60,autoAlpha:0,duration:1},'-=.4')
+        .from('.hero .sub',{y:24,autoAlpha:0,duration:.8},'-=.6')
+        .from('.scrolldown',{autoAlpha:0,duration:.6},'-=.4');
+    }
+  }catch(e){}
+})();
+</script>
+</body>
 </html>
